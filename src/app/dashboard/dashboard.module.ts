@@ -1,5 +1,13 @@
+import { LayoutModule } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import {
+  MatButtonModule,
+  MatIconModule,
+  MatListModule,
+  MatSidenavModule,
+  MatToolbarModule
+} from '@angular/material';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { TemplateComponent } from './template.component';
@@ -7,6 +15,12 @@ import { TemplateComponent } from './template.component';
 @NgModule({
   imports: [
     CommonModule,
+    LayoutModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule,
     DashboardRoutingModule
   ],
   declarations: [
