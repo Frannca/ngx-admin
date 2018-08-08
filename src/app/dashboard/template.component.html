@@ -1,13 +1,15 @@
-<div class="example-container" [class.red]="false">
-  <mat-toolbar color="primary" class="example-toolbar">
-    <button mat-icon-button (click)="snav.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <h1 class="example-app-name">Responsive App</h1>
-  </mat-toolbar>
+<header class="mdc-top-app-bar">
+  <div class="mdc-top-app-bar__row">
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start mat-elevation-z4">
+      <a (click)="snav.toggle()" class="material-icons mdc-top-app-bar__navigation-icon">menu</a>
+      <span class="mdc-top-app-bar__title">Title</span>
+    </section>
+  </div>
+</header>
 
+<div class="example-container">
   <mat-sidenav-container class="example-sidenav-container">
-    <mat-sidenav #snav [opened]="true" [mode]="'side'" [fixedInViewport]="true" fixedTopGap="64">
+    <mat-sidenav #snav [opened]="true" [mode]="'side'" [fixedInViewport]="true" [fixedTopGap]="64" class="mat-elevation-z2">
 
       <!-- Navigation list -->
       <mat-nav-list role="navigation">
@@ -28,82 +30,87 @@
         </mat-list-item>
 
         <!-- Link with multi-line -->
-        <mat-list-item>
-          <h3 matLine> Link</h3>
-          <p matLine>
-            <span> With multi-line </span>
-          </p>
-        </mat-list-item>
+        <!--<mat-list-item>-->
+          <!--<h3 matLine> Link</h3>-->
+          <!--<p matLine>-->
+            <!--<span> With multi-line </span>-->
+          <!--</p>-->
+        <!--</mat-list-item>-->
 
         <!-- Link with multi-line and icon -->
-        <mat-list-item>
-          <mat-icon matListIcon>folder</mat-icon>
-          <h3 matLine> Link</h3>
-          <p matLine>
-            <span> With multi-line</span>
-            <span> multi-line </span>
-          </p>
-        </mat-list-item>
+        <!--<mat-list-item>-->
+          <!--<mat-icon matListIcon>folder</mat-icon>-->
+          <!--<h3 matLine> Link</h3>-->
+          <!--<p matLine>-->
+            <!--<span> With multi-line</span>-->
+            <!--<span> multi-line </span>-->
+          <!--</p>-->
+        <!--</mat-list-item>-->
 
         <!-- Link with avatar -->
-        <mat-list>
-          <mat-list-item>
-            <img matListAvatar src="../../assets/images/renato-franca.jpg" alt="...">
-            <h3 matLine> Renato França </h3>
-          </mat-list-item>
-        </mat-list>
+        <!--<mat-list>-->
+          <!--<mat-list-item>-->
+            <!--<img matListAvatar src="../../assets/images/renato-franca.jpg" alt="...">-->
+            <!--<h3 matLine> Renato França </h3>-->
+          <!--</mat-list-item>-->
+        <!--</mat-list>-->
 
-        <mat-expansion-panel class="example-expansion-panel">
-          <mat-expansion-panel-header matRipple [expandedHeight]="'56px'" [collapsedHeight]="'56px'" class="example-expansion-panel-header">
-            <mat-panel-title class="ripple-effect">
-              <mat-icon matListIcon class="example-icon">info</mat-icon>
-              <span class="example-panel-title">Personal data</span>
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <mat-list-item>
-            <mat-icon matListIcon>info</mat-icon>
-            <a matLine [routerLink]="['/']">Link with icon</a>
-          </mat-list-item>
-          <mat-list-item>
-            <mat-icon matListIcon>info</mat-icon>
-            <a matLine [routerLink]="['/']">Link with icon</a>
-          </mat-list-item>
-          <mat-list-item>
-            <mat-icon matListIcon>info</mat-icon>
-            <a matLine [routerLink]="['/']">Link with icon</a>
-          </mat-list-item>
-        </mat-expansion-panel>
+        <!--<mat-expansion-panel class="example-expansion-panel">-->
+          <!--<mat-expansion-panel-header matRipple [expandedHeight]="'56px'" [collapsedHeight]="'56px'" class="example-expansion-panel-header">-->
+            <!--<mat-panel-title class="ripple-effect">-->
+              <!--<mat-icon matListIcon class="example-icon">info</mat-icon>-->
+              <!--<span class="example-panel-title">Personal data</span>-->
+            <!--</mat-panel-title>-->
+          <!--</mat-expansion-panel-header>-->
+          <!--<mat-list-item>-->
+            <!--<mat-icon matListIcon>info</mat-icon>-->
+            <!--<a matLine [routerLink]="['/']">Link with icon</a>-->
+          <!--</mat-list-item>-->
+          <!--<mat-list-item>-->
+            <!--<mat-icon matListIcon>info</mat-icon>-->
+            <!--<a matLine [routerLink]="['/']">Link with icon</a>-->
+          <!--</mat-list-item>-->
+          <!--<mat-list-item>-->
+            <!--<mat-icon matListIcon>info</mat-icon>-->
+            <!--<a matLine [routerLink]="['/']">Link with icon</a>-->
+          <!--</mat-list-item>-->
+        <!--</mat-expansion-panel>-->
 
         <!-- Dense list -->
-        <mat-list dense>
-          <mat-list-item> Dense list 1 </mat-list-item>
-          <mat-list-item> Dense list 2 </mat-list-item>
-          <mat-list-item> Dense list 3 </mat-list-item>
-        </mat-list>
+        <!--<mat-list dense>-->
+          <!--<mat-list-item> Dense list 1 </mat-list-item>-->
+          <!--<mat-list-item> Dense list 2 </mat-list-item>-->
+          <!--<mat-list-item> Dense list 3 </mat-list-item>-->
+        <!--</mat-list>-->
 
         <!-- Multiple sections -->
-        <mat-list>
-          <h3 matSubheader>Header</h3>
-          <mat-list-item>
-            <mat-icon matListIcon>folder</mat-icon>
-            <h4 matLine>folder.name</h4>
-            <p matLine class="demo-2"> folder.updated </p>
-          </mat-list-item>
-          <mat-divider></mat-divider>
-          <h3 matSubheader>Notes</h3>
-          <mat-list-item>
-            <mat-icon matListIcon>note</mat-icon>
-            <h4 matLine>note.name</h4>
-            <p matLine class="demo-2"> note.updated </p>
-          </mat-list-item>
-        </mat-list>
+        <!--<mat-list>-->
+          <!--<h3 matSubheader>Header</h3>-->
+          <!--<mat-list-item>-->
+            <!--<mat-icon matListIcon>folder</mat-icon>-->
+            <!--<h4 matLine>folder.name</h4>-->
+            <!--<p matLine class="demo-2"> folder.updated </p>-->
+          <!--</mat-list-item>-->
+          <!--<mat-divider></mat-divider>-->
+          <!--<h3 matSubheader>Notes</h3>-->
+          <!--<mat-list-item>-->
+            <!--<mat-icon matListIcon>note</mat-icon>-->
+            <!--<h4 matLine>note.name</h4>-->
+            <!--<p matLine class="demo-2"> note.updated </p>-->
+          <!--</mat-list-item>-->
+        <!--</mat-list>-->
 
       </mat-nav-list>
 
     </mat-sidenav>
 
     <mat-sidenav-content class="example-sidenav-content">
-      <p *ngFor="let content of fillerContent">{{content}}</p>
+      <div class="example-content">
+        <h4 class="mdc-typography--headline4">Dashboard</h4>
+
+
+
+      </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

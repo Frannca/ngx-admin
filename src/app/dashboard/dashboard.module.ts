@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import {
   MatButtonModule,
+  MatCardModule,
   MatExpansionModule,
   MatIconModule,
   MatListModule,
@@ -23,6 +24,7 @@ import { TemplateComponent } from './template.component';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
+    MatCardModule,
     DashboardRoutingModule
   ],
   declarations: [

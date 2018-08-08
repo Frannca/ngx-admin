@@ -4,15 +4,19 @@ import {
 } from '@angular/cdk/layout';
 import {
   Component,
-  OnDestroy
+  OnDestroy,
+  OnInit
 } from '@angular/core';
+import { MDCTopAppBar } from '@material/top-app-bar/index';
 
 @Component({
   selector: 'app-template',
   templateUrl: './template.component.html',
   styleUrls: ['./template.component.scss']
 })
-export class TemplateComponent implements OnDestroy {
+export class TemplateComponent implements OnDestroy, OnInit {
+
+  isExpanded = false;
 
   fillerContent = Array.from({length: 50}, () =>
     `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -42,6 +46,11 @@ export class TemplateComponent implements OnDestroy {
   }
 
   ngOnDestroy(): void {
+  }
+
+  ngOnInit() {
+    const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+    const topAppBar = new MDCTopAppBar(topAppBarElement);
   }
 
 }

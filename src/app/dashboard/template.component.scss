@@ -1,11 +1,18 @@
+@import "~@material/top-app-bar/dist/mdc.top-app-bar.min.css";
+
 .example-toolbar {
   position: fixed;
   top: 0;
-  z-index: 100;
+  //z-index: 4;
 }
 
-.example-sidenav-content {
-  padding-top: 64px;
+.example-container,
+.example-sidenav-container {
+  height: 100%;
+}
+
+.example-content {
+  padding: 64px 20px 20px 20px;
 }
 
 .red {
