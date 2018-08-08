@@ -9,7 +9,7 @@
 
 <div class="example-container">
   <mat-sidenav-container class="example-sidenav-container">
-    <mat-sidenav #snav [opened]="true" [mode]="mode" [fixedInViewport]="true" [fixedTopGap]="64" class="mat-elevation-z2">
+    <mat-sidenav #snav [opened]="sidenav.opened" [mode]="sidenav.mode" [fixedInViewport]="true" [fixedTopGap]="sidenav.fixedTopGap" class="mat-elevation-z2">
 
       <!-- Navigation list -->
       <mat-nav-list role="navigation">
