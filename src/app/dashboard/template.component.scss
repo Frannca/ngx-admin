@@ -11,3 +11,20 @@
 .red {
   background-color: red;
 }
+
+.example-expansion-panel {
+  box-shadow: none !important;
+}
+
+.example-expansion-panel-header {
+  padding: 0 16px;
+
+  .example-icon {
+    padding: 4px;
+  }
+
+  .example-panel-title {
+    line-height: 32px;
+    padding-left: 16px;
+  }
+}

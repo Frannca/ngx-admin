@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import {
   MatButtonModule,
+  MatExpansionModule,
   MatIconModule,
   MatListModule,
   MatSidenavModule,
@@ -16,6 +17,7 @@ import { TemplateComponent } from './template.component';
   imports: [
     CommonModule,
     LayoutModule,
+    MatExpansionModule,
     MatButtonModule,
     MatSidenavModule,
     MatToolbarModule,

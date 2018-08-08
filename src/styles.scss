@@ -8,3 +8,13 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
+
+.example-expansion-panel {
+  &.mat-expanded {
+    background: rgba(245, 245, 245, 1);
+  }
+}
+
+.mat-expansion-panel-body {
+  padding: 0 !important;
+}
