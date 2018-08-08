@@ -38,7 +38,7 @@
 
 .frannca-title {
   border-bottom: 1px solid rgba(0, 0, 0, 0.87);
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 .button-row {
@@ -53,8 +53,11 @@
   }
 }
 
+.frannca-content {
+  margin-bottom: 20px;
+}
+
 .frannca-flex-list {
   background-color: white;
-  margin-top: 20px;
   padding: 1rem;
 }
