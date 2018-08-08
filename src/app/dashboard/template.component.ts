@@ -7,6 +7,7 @@ import {
   OnDestroy,
   OnInit
 } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { MDCTopAppBar } from '@material/top-app-bar/index';
 
 @Component({
@@ -16,7 +17,10 @@ import { MDCTopAppBar } from '@material/top-app-bar/index';
 })
 export class TemplateComponent implements OnDestroy, OnInit {
 
-  isExpanded = false;
+  mode = 'side';
+  handset = false;
+  tablet = false;
+  web = false;
 
   fillerContent = Array.from({length: 50}, () =>
     `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -28,19 +32,22 @@ export class TemplateComponent implements OnDestroy, OnInit {
   constructor(breakpointObserver: BreakpointObserver) {
     breakpointObserver.observe(Breakpoints.Handset).subscribe(result => {
       if (result.matches) {
-        console.log('handset');
+        this.handset = true;
+        this.mode = 'over';
       }
     });
 
     breakpointObserver.observe(Breakpoints.Tablet).subscribe(result => {
       if (result.matches) {
-        console.log('tablet');
+        this.tablet = true;
+        this.mode = 'over';
       }
     });
 
     breakpointObserver.observe(Breakpoints.Web).subscribe(result => {
       if (result.matches) {
-        console.log('web');
+        this.web = true;
+        this.mode = 'side';
       }
     });
   }

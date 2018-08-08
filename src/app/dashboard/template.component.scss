@@ -35,3 +35,26 @@
     padding-left: 16px;
   }
 }
+
+.frannca-title {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.87);
+  margin-bottom: 0;
+}
+
+.button-row {
+  display: inline-flex;
+
+  &.handset {
+    display: block;
+  }
+
+  a {
+    margin-right: 8px;
+  }
+}
+
+.frannca-flex-list {
+  background-color: white;
+  margin-top: 20px;
+  padding: 1rem;
+}

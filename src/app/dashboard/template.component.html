@@ -9,7 +9,7 @@
 
 <div class="example-container">
   <mat-sidenav-container class="example-sidenav-container">
-    <mat-sidenav #snav [opened]="true" [mode]="'side'" [fixedInViewport]="true" [fixedTopGap]="64" class="mat-elevation-z2">
+    <mat-sidenav #snav [opened]="true" [mode]="mode" [fixedInViewport]="true" [fixedTopGap]="64" class="mat-elevation-z2">
 
       <!-- Navigation list -->
       <mat-nav-list role="navigation">
@@ -108,7 +108,103 @@
       <div class="example-content">
         <h4 class="mdc-typography--headline4">Dashboard</h4>
 
+        <h5 class="frannca-title mdc-typography--headline5">Resources</h5>
 
+        <!--<div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="30px" fxLayoutGap.xs="0">-->
+          <!--<div class="item item-1" fxFlex="15%" style="background-color: aquamarine">Item 1</div>-->
+          <!--<div class="item item-2" fxFlex="20%" fxFlexOrder="3">Item 2</div>-->
+          <!--<div class="item item-3" fxFlex>Item 3</div>-->
+        <!--</div>-->
+
+        <!--<div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">-->
+          <!--<div class="item item-4" style="background-color: aqua" fxFlex fxFlexOffset="50px"  fxFlexOffset.xs="0">Item 4</div>-->
+          <!--<div class="item item-5" fxFlex="400px">Item 5</div>-->
+        <!--</div>-->
+
+        <div class="frannca-flex-list mat-elevation-z2">
+          <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between" class="content">
+            <div fxLayout="column" fxFlex.xs="36px" fxLayoutAlign="center">
+              Top App Bar
+            </div>
+            <div class="blocks">
+              <div class="button-row">
+                <a href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-top-app-bar" target="_blank" mat-flat-button>
+                  <mat-icon>open_in_new</mat-icon>
+                  Source
+                </a>
+                <a href="https://material-components.github.io/material-components-web-catalog/#/component/top-app-bar" target="_blank" mat-flat-button>
+                  <mat-icon>open_in_new</mat-icon>
+                  Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="frannca-flex-list mat-elevation-z2">
+          <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between">
+            <div fxLayout="column" fxFlex.xs="36px" fxLayoutAlign="center">
+              Sidenav
+            </div>
+            <div class="blocks">
+              <div class="button-row">
+                <a href="https://github.com/angular/material2/blob/master/src/lib/sidenav/sidenav.md" target="_blank" mat-flat-button>
+                  <mat-icon>open_in_new</mat-icon>
+                  Source
+                </a>
+                <a href="https://material.angular.io/components/sidenav/examples" target="_blank" mat-flat-button>
+                  <mat-icon>open_in_new</mat-icon>
+                  Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="frannca-flex-list mat-elevation-z2">
+          <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between" class="content">
+            <div fxLayout="column" fxFlex.xs="36px" fxLayoutAlign="center">
+              List
+            </div>
+            <div class="blocks">
+              <div class="button-row">
+                <a href="https://github.com/angular/material2/blob/master/src/lib/list/list.md" target="_blank" mat-flat-button>
+                  <mat-icon>open_in_new</mat-icon>
+                  Source
+                </a>
+                <a href="https://material.angular.io/components/list/examples" target="_blank" mat-flat-button>
+                  <mat-icon>open_in_new</mat-icon>
+                  Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!---->
+        <!--<div class="container">-->
+          <!--<div fxLayout="row" fxLayoutAlign="space-around center" class="content">-->
+            <!--<div class="blocks">1</div>-->
+            <!--<div class="blocks">2</div>-->
+            <!--<div class="blocks">3</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+          <!--<div fxLayout="row" fxLayoutAlign="begin center" class="content">-->
+            <!--<div class="blocks">1</div>-->
+            <!--<div class="blocks">2</div>-->
+            <!--<div class="blocks">3</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+          <!--<div fxLayout="row"-->
+               <!--fxLayout.xs="column"-->
+               <!--fxLayout.sm="column"-->
+               <!--fxFlex class="contentResp">-->
+            <!--<div class="blocks" fxFlex> I'm above on mobile, and to the left on larger devices.   </div>-->
+            <!--<div class="blocks" fxFlex> I'm below on mobile, and to the right on larger devices.  </div>-->
+          <!--</div>-->
+        <!--</div>-->
 
       </div>
     </mat-sidenav-content>

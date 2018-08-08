@@ -2,9 +2,13 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import {
+  FlexLayoutModule,
+} from '@angular/flex-layout';
+import {
   MatButtonModule,
   MatCardModule,
   MatExpansionModule,
+  MatGridListModule,
   MatIconModule,
   MatListModule,
   MatSidenavModule,
@@ -19,12 +23,14 @@ import { TemplateComponent } from './template.component';
     CommonModule,
     LayoutModule,
     MatExpansionModule,
+    MatGridListModule,
     MatButtonModule,
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
     MatListModule,
     MatCardModule,
+    FlexLayoutModule,
     DashboardRoutingModule
   ],
   declarations: [
