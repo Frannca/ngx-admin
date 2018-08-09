@@ -14,21 +14,305 @@
 
       <!-- Simple -->
       <mat-nav-list role="navigation" *ngIf="sidebarType == 'simple'">
-        <a mat-list-item [routerLink]="['/']">Link 1</a>
-        <a mat-list-item [routerLink]="['/']">Link 2</a>
-        <a mat-list-item [routerLink]="['/']">Link 3</a>
-        <a mat-list-item [routerLink]="['/']">Link 4</a>
-        <a mat-list-item [routerLink]="['/']">Link 5</a>
-        <a mat-list-item [routerLink]="['/']">Link 6</a>
-        <a mat-list-item [routerLink]="['/']">Link 7</a>
-        <a mat-list-item [routerLink]="['/']">Link 8</a>
-        <a mat-list-item [routerLink]="['/']">Link 9</a>
-        <a mat-list-item [routerLink]="['/']">Link 10</a>
+        <a mat-list-item [routerLink]="['/']">This is a simplel link</a>
+        <a mat-list-item [routerLink]="['/']">This is a simplel link</a>
+        <a mat-list-item [routerLink]="['/']">This is a simplel link</a>
+        <a mat-list-item [routerLink]="['/']">This is a simplel link</a>
+        <a mat-list-item [routerLink]="['/']">This is a simplel link</a>
+        <a mat-list-item [routerLink]="['/']">This is a simplel link</a>
+        <a mat-list-item [routerLink]="['/']">This is a simplel link</a>
+        <a mat-list-item [routerLink]="['/']">This is a simplel link</a>
+        <a mat-list-item [routerLink]="['/']">This is a simplel link</a>
+        <a mat-list-item [routerLink]="['/']">This is a simplel link</a>
+      </mat-nav-list>
+
+      <!-- With icon -->
+      <mat-nav-list role="navigation" *ngIf="sidebarType == 'with-icon'">
+        <mat-list-item>
+          <mat-icon matListIcon>dashboard</mat-icon>
+          <a matLine [routerLink]="['/']">This is a link with icon</a>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>home</mat-icon>
+          <a matLine [routerLink]="['/']">This is a link with icon</a>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>favorite</mat-icon>
+          <a matLine [routerLink]="['/']">This is a link with icon</a>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>list</mat-icon>
+          <a matLine [routerLink]="['/']">This is a link with icon</a>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>add</mat-icon>
+          <a matLine [routerLink]="['/']">This is a link with icon</a>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>perm_identity</mat-icon>
+          <a matLine [routerLink]="['/']">This is a link with icon</a>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>power_settings_new</mat-icon>
+          <a matLine [routerLink]="['/']">This is a link with icon</a>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>settings</mat-icon>
+          <a matLine [routerLink]="['/']">This is a link with icon</a>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>category</mat-icon>
+          <a matLine [routerLink]="['/']">This is a link with icon</a>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>location_on</mat-icon>
+          <a matLine [routerLink]="['/']">This is a link with icon</a>
+        </mat-list-item>
+      </mat-nav-list>
+
+      <!-- Multi-level -->
+      <mat-nav-list role="navigation" *ngIf="sidebarType == 'multi-level'">
+        <mat-expansion-panel class="example-expansion-panel">
+          <mat-expansion-panel-header matRipple [expandedHeight]="'56px'" [collapsedHeight]="'56px'" class="example-expansion-panel-header">
+            <mat-panel-title class="ripple-effect">
+              <mat-icon matListIcon class="example-icon">dashboard</mat-icon>
+              <span class="example-panel-title">This is the multi-level title</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>star</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+        </mat-expansion-panel>
+        <mat-expansion-panel class="example-expansion-panel">
+          <mat-expansion-panel-header matRipple [expandedHeight]="'56px'" [collapsedHeight]="'56px'" class="example-expansion-panel-header">
+            <mat-panel-title class="ripple-effect">
+              <mat-icon matListIcon class="example-icon">home</mat-icon>
+              <span class="example-panel-title">This is the multi-level title</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>star</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+        </mat-expansion-panel>
+        <mat-expansion-panel class="example-expansion-panel">
+          <mat-expansion-panel-header matRipple [expandedHeight]="'56px'" [collapsedHeight]="'56px'" class="example-expansion-panel-header">
+            <mat-panel-title class="ripple-effect">
+              <mat-icon matListIcon class="example-icon">favorite</mat-icon>
+              <span class="example-panel-title">This is the multi-level title</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>star</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+        </mat-expansion-panel>
+        <mat-expansion-panel class="example-expansion-panel">
+          <mat-expansion-panel-header matRipple [expandedHeight]="'56px'" [collapsedHeight]="'56px'" class="example-expansion-panel-header">
+            <mat-panel-title class="ripple-effect">
+              <mat-icon matListIcon class="example-icon">list</mat-icon>
+              <span class="example-panel-title">This is the multi-level title</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>star</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+        </mat-expansion-panel>
+        <mat-expansion-panel class="example-expansion-panel">
+          <mat-expansion-panel-header matRipple [expandedHeight]="'56px'" [collapsedHeight]="'56px'" class="example-expansion-panel-header">
+            <mat-panel-title class="ripple-effect">
+              <mat-icon matListIcon class="example-icon">add</mat-icon>
+              <span class="example-panel-title">This is the multi-level title</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>star</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+        </mat-expansion-panel>
+        <mat-expansion-panel class="example-expansion-panel">
+          <mat-expansion-panel-header matRipple [expandedHeight]="'56px'" [collapsedHeight]="'56px'" class="example-expansion-panel-header">
+            <mat-panel-title class="ripple-effect">
+              <mat-icon matListIcon class="example-icon">perm_identity</mat-icon>
+              <span class="example-panel-title">This is the multi-level title</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>star</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+        </mat-expansion-panel>
+        <mat-expansion-panel class="example-expansion-panel">
+          <mat-expansion-panel-header matRipple [expandedHeight]="'56px'" [collapsedHeight]="'56px'" class="example-expansion-panel-header">
+            <mat-panel-title class="ripple-effect">
+              <mat-icon matListIcon class="example-icon">power_settings_new</mat-icon>
+              <span class="example-panel-title">This is the multi-level title</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>star</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+        </mat-expansion-panel>
+        <mat-expansion-panel class="example-expansion-panel">
+          <mat-expansion-panel-header matRipple [expandedHeight]="'56px'" [collapsedHeight]="'56px'" class="example-expansion-panel-header">
+            <mat-panel-title class="ripple-effect">
+              <mat-icon matListIcon class="example-icon">settings</mat-icon>
+              <span class="example-panel-title">This is the multi-level title</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>star</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+        </mat-expansion-panel>
+        <mat-expansion-panel class="example-expansion-panel">
+          <mat-expansion-panel-header matRipple [expandedHeight]="'56px'" [collapsedHeight]="'56px'" class="example-expansion-panel-header">
+            <mat-panel-title class="ripple-effect">
+              <mat-icon matListIcon class="example-icon">category</mat-icon>
+              <span class="example-panel-title">This is the multi-level title</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>star</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+        </mat-expansion-panel>
+        <mat-expansion-panel class="example-expansion-panel">
+          <mat-expansion-panel-header matRipple [expandedHeight]="'56px'" [collapsedHeight]="'56px'" class="example-expansion-panel-header">
+            <mat-panel-title class="ripple-effect">
+              <mat-icon matListIcon class="example-icon">location_on</mat-icon>
+              <span class="example-panel-title">This is the multi-level title</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>star</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <a matLine [routerLink]="['/']">This is a submenu</a>
+          </mat-list-item>
+        </mat-expansion-panel>
       </mat-nav-list>
 
       <!-- With avatar -->
       <mat-nav-list role="navigation" *ngIf="sidebarType == 'with-avatar'">
         <mat-list>
+          <mat-list-item>
+            <img matListAvatar src="../../assets/images/renato-franca.jpg" alt="...">
+            <h3 matLine> Renato França </h3>
+          </mat-list-item>
+          <mat-list-item>
+            <img matListAvatar src="../../assets/images/renato-franca.jpg" alt="...">
+            <h3 matLine> Renato França </h3>
+          </mat-list-item>
+          <mat-list-item>
+            <img matListAvatar src="../../assets/images/renato-franca.jpg" alt="...">
+            <h3 matLine> Renato França </h3>
+          </mat-list-item>
+          <mat-list-item>
+            <img matListAvatar src="../../assets/images/renato-franca.jpg" alt="...">
+            <h3 matLine> Renato França </h3>
+          </mat-list-item>
+          <mat-list-item>
+            <img matListAvatar src="../../assets/images/renato-franca.jpg" alt="...">
+            <h3 matLine> Renato França </h3>
+          </mat-list-item>
+          <mat-list-item>
+            <img matListAvatar src="../../assets/images/renato-franca.jpg" alt="...">
+            <h3 matLine> Renato França </h3>
+          </mat-list-item>
+          <mat-list-item>
+            <img matListAvatar src="../../assets/images/renato-franca.jpg" alt="...">
+            <h3 matLine> Renato França </h3>
+          </mat-list-item>
+          <mat-list-item>
+            <img matListAvatar src="../../assets/images/renato-franca.jpg" alt="...">
+            <h3 matLine> Renato França </h3>
+          </mat-list-item>
+          <mat-list-item>
+            <img matListAvatar src="../../assets/images/renato-franca.jpg" alt="...">
+            <h3 matLine> Renato França </h3>
+          </mat-list-item>
           <mat-list-item>
             <img matListAvatar src="../../assets/images/renato-franca.jpg" alt="...">
             <h3 matLine> Renato França </h3>
@@ -39,9 +323,63 @@
       <!-- Multi-line -->
       <mat-nav-list role="navigation" *ngIf="sidebarType == 'multi-line'">
         <mat-list-item>
-          <h3 matLine> Link</h3>
+          <h3 matLine> This is a link with multi-line</h3>
           <p matLine>
-            <span> With multi-line </span>
+            <span> This is the second line </span>
+          </p>
+        </mat-list-item>
+        <mat-list-item>
+          <h3 matLine> This is a link with multi-line</h3>
+          <p matLine>
+            <span> This is the second line </span>
+          </p>
+        </mat-list-item>
+        <mat-list-item>
+          <h3 matLine> This is a link with multi-line</h3>
+          <p matLine>
+            <span> This is the second line </span>
+          </p>
+        </mat-list-item>
+        <mat-list-item>
+          <h3 matLine> This is a link with multi-line</h3>
+          <p matLine>
+            <span> This is the second line </span>
+          </p>
+        </mat-list-item>
+        <mat-list-item>
+          <h3 matLine> This is a link with multi-line</h3>
+          <p matLine>
+            <span> This is the second line </span>
+          </p>
+        </mat-list-item>
+        <mat-list-item>
+          <h3 matLine> This is a link with multi-line</h3>
+          <p matLine>
+            <span> This is the second line </span>
+          </p>
+        </mat-list-item>
+        <mat-list-item>
+          <h3 matLine> This is a link with multi-line</h3>
+          <p matLine>
+            <span> This is the second line </span>
+          </p>
+        </mat-list-item>
+        <mat-list-item>
+          <h3 matLine> This is a link with multi-line</h3>
+          <p matLine>
+            <span> This is the second line </span>
+          </p>
+        </mat-list-item>
+        <mat-list-item>
+          <h3 matLine> This is a link with multi-line</h3>
+          <p matLine>
+            <span> This is the second line </span>
+          </p>
+        </mat-list-item>
+        <mat-list-item>
+          <h3 matLine> This is a link with multi-line</h3>
+          <p matLine>
+            <span> This is the second line </span>
           </p>
         </mat-list-item>
       </mat-nav-list>
@@ -49,64 +387,144 @@
       <!-- Multi-line with icon -->
       <mat-nav-list role="navigation" *ngIf="sidebarType == 'multi-line-with-icon'">
         <mat-list-item>
-          <mat-icon matListIcon>folder</mat-icon>
-          <h3 matLine> Link</h3>
+          <mat-icon matListIcon>dashboard</mat-icon>
+          <h3 matLine> This is a link</h3>
           <p matLine>
             <span> With multi-line</span>
-            <span> multi-line </span>
+            <span> and icon </span>
           </p>
         </mat-list-item>
-      </mat-nav-list>
-
-      <!-- Multi-level -->
-      <mat-nav-list role="navigation" *ngIf="sidebarType == 'multi-level'">
-        <mat-expansion-panel class="example-expansion-panel">
-          <mat-expansion-panel-header matRipple [expandedHeight]="'56px'" [collapsedHeight]="'56px'" class="example-expansion-panel-header">
-            <mat-panel-title class="ripple-effect">
-              <mat-icon matListIcon class="example-icon">info</mat-icon>
-              <span class="example-panel-title">Personal data</span>
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <mat-list-item>
-            <mat-icon matListIcon>info</mat-icon>
-            <a matLine [routerLink]="['/']">Link with icon</a>
-          </mat-list-item>
-          <mat-list-item>
-            <mat-icon matListIcon>info</mat-icon>
-            <a matLine [routerLink]="['/']">Link with icon</a>
-          </mat-list-item>
-          <mat-list-item>
-            <mat-icon matListIcon>info</mat-icon>
-            <a matLine [routerLink]="['/']">Link with icon</a>
-          </mat-list-item>
-        </mat-expansion-panel>
+        <mat-list-item>
+          <mat-icon matListIcon>home</mat-icon>
+          <h3 matLine> This is a link</h3>
+          <p matLine>
+            <span> With multi-line</span>
+            <span> and icon </span>
+          </p>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>favorite</mat-icon>
+          <h3 matLine> This is a link</h3>
+          <p matLine>
+            <span> With multi-line</span>
+            <span> and icon </span>
+          </p>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>list</mat-icon>
+          <h3 matLine> This is a link</h3>
+          <p matLine>
+            <span> With multi-line</span>
+            <span> and icon </span>
+          </p>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>add</mat-icon>
+          <h3 matLine> This is a link</h3>
+          <p matLine>
+            <span> With multi-line</span>
+            <span> and icon </span>
+          </p>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>perm_identity</mat-icon>
+          <h3 matLine> This is a link</h3>
+          <p matLine>
+            <span> With multi-line</span>
+            <span> and icon </span>
+          </p>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>power_settings_new</mat-icon>
+          <h3 matLine> This is a link</h3>
+          <p matLine>
+            <span> With multi-line</span>
+            <span> and icon </span>
+          </p>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>settings</mat-icon>
+          <h3 matLine> This is a link</h3>
+          <p matLine>
+            <span> With multi-line</span>
+            <span> and icon </span>
+          </p>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>category</mat-icon>
+          <h3 matLine> This is a link</h3>
+          <p matLine>
+            <span> With multi-line</span>
+            <span> and icon </span>
+          </p>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>location_on</mat-icon>
+          <h3 matLine> This is a link</h3>
+          <p matLine>
+            <span> With multi-line</span>
+            <span> and icon </span>
+          </p>
+        </mat-list-item>
       </mat-nav-list>
 
        <!-- With section -->
       <mat-nav-list role="navigation" *ngIf="sidebarType == 'with-section'">
         <mat-list>
-          <h3 matSubheader>Header</h3>
+          <h3 matSubheader>Section One</h3>
           <mat-list-item>
-            <mat-icon matListIcon>folder</mat-icon>
-            <h4 matLine>folder.name</h4>
-            <p matLine class="demo-2"> folder.updated </p>
+            <mat-icon matListIcon>dashboard</mat-icon>
+            <h4 matLine>This is a link</h4>
+            <p matLine class="demo-2"> with section </p>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>home</mat-icon>
+            <h4 matLine>This is a link</h4>
+            <p matLine class="demo-2"> with section </p>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <h4 matLine>This is a link</h4>
+            <p matLine class="demo-2"> with section </p>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>list</mat-icon>
+            <h4 matLine>This is a link</h4>
+            <p matLine class="demo-2"> with section </p>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>add</mat-icon>
+            <h4 matLine>This is a link</h4>
+            <p matLine class="demo-2"> with section </p>
           </mat-list-item>
           <mat-divider></mat-divider>
-          <h3 matSubheader>Notes</h3>
+          <h3 matSubheader>Section Two</h3>
           <mat-list-item>
-            <mat-icon matListIcon>note</mat-icon>
-            <h4 matLine>note.name</h4>
-            <p matLine class="demo-2"> note.updated </p>
+            <mat-icon matListIcon>dashboard</mat-icon>
+            <h4 matLine>This is a link</h4>
+            <p matLine class="demo-2"> with section </p>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>home</mat-icon>
+            <h4 matLine>This is a link</h4>
+            <p matLine class="demo-2"> with section </p>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>favorite</mat-icon>
+            <h4 matLine>This is a link</h4>
+            <p matLine class="demo-2"> with section </p>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>list</mat-icon>
+            <h4 matLine>This is a link</h4>
+            <p matLine class="demo-2"> with section </p>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>add</mat-icon>
+            <h4 matLine>This is a link</h4>
+            <p matLine class="demo-2"> with section </p>
           </mat-list-item>
         </mat-list>
-      </mat-nav-list>
-
-      <!-- With icon -->
-      <mat-nav-list role="navigation" *ngIf="sidebarType == 'with-icon'">
-        <mat-list-item>
-          <mat-icon matListIcon>info</mat-icon>
-          <a matLine [routerLink]="['/']">Link with icon</a>
-        </mat-list-item>
       </mat-nav-list>
     </mat-sidenav>
 
@@ -193,14 +611,29 @@
 
         <h5 class="frannca-title mdc-typography--headline5">Options</h5>
 
-        <button (click)="changeSidebarType('simple', snav)">Simple</button>
-        <button (click)="changeSidebarType('with-avatar', snav)">With Avatar</button>
-        <button (click)="changeSidebarType('multi-line', snav)">Multi-line</button>
-        <button (click)="changeSidebarType('multi-line-with-icon', snav)">Multi-line with icon</button>
-        <button (click)="changeSidebarType('multi-level', snav)">Multi-level</button>
-        <button (click)="changeSidebarType('with-section', snav)">With section</button>
-        <button (click)="changeSidebarType('with-icon', snav)">With icon</button>
-
+        <mat-grid-list cols="4" rowHeight="100px" gutterSize="20" class="sidenav-options">
+          <mat-grid-tile>
+            <button mat-flat-button [ngClass]="{'inactive': sidebarType != 'simple'}" (click)="changeSidebarType('simple', snav)">Simple</button>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <button mat-flat-button [ngClass]="{'inactive': sidebarType != 'with-icon'}" (click)="changeSidebarType('with-icon', snav)">With Icon</button>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <button mat-flat-button [ngClass]="{'inactive': sidebarType != 'multi-level'}" (click)="changeSidebarType('multi-level', snav)">Multi-Level</button>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <button mat-flat-button [ngClass]="{'inactive': sidebarType != 'with-avatar'}" (click)="changeSidebarType('with-avatar', snav)">With Avatar</button>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <button mat-flat-button [ngClass]="{'inactive': sidebarType != 'multi-line'}" (click)="changeSidebarType('multi-line', snav)">Multi-Line</button>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <button mat-flat-button [ngClass]="{'inactive': sidebarType != 'multi-line-with-icon'}" (click)="changeSidebarType('multi-line-with-icon', snav)">Multi-Line with Icon</button>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <button mat-flat-button [ngClass]="{'inactive': sidebarType != 'with-section'}" (click)="changeSidebarType('with-section', snav)">With Section</button>
+          </mat-grid-tile>
+        </mat-grid-list>
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>

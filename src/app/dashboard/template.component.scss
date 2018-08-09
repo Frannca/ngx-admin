@@ -61,3 +61,14 @@
   background-color: white;
   padding: 1rem;
 }
+
+.sidenav-options {
+  button {
+    height: 100%;
+    width: 100%;
+
+    &.inactive {
+      opacity: 0.8;
+    }
+  }
+}
