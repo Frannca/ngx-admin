@@ -3,9 +3,9 @@ import {
   Breakpoints
 } from '@angular/cdk/layout';
 import {
+  AfterViewInit,
   Component,
   OnDestroy,
-  OnInit
 } from '@angular/core';
 import { MDCTopAppBar } from '@material/top-app-bar/index';
 
@@ -14,7 +14,7 @@ import { MDCTopAppBar } from '@material/top-app-bar/index';
   templateUrl: './template.component.html',
   styleUrls: ['./template.component.scss']
 })
-export class TemplateComponent implements OnDestroy, OnInit {
+export class TemplateComponent implements OnDestroy, AfterViewInit {
 
   sidenav = {
     opened: true,
@@ -26,31 +26,39 @@ export class TemplateComponent implements OnDestroy, OnInit {
   tablet = false;
   web = false;
 
+  sidebarType = 'simple';
+
   constructor(breakpointObserver: BreakpointObserver) {
     breakpointObserver.observe(Breakpoints.Handset).subscribe(result => {
       if (result.matches) {
-        this.handset = true;
-        this.sidenav.opened = false;
-        this.sidenav.mode = 'over';
-        this.sidenav.fixedTopGap = 56;
+        setTimeout(() => {
+          this.handset = true;
+          this.sidenav.opened = false;
+          this.sidenav.mode = 'over';
+          this.sidenav.fixedTopGap = 56;
+        });
       }
     });
 
     breakpointObserver.observe(Breakpoints.Tablet).subscribe(result => {
       if (result.matches) {
-        this.tablet = true;
-        this.sidenav.opened = false;
-        this.sidenav.mode = 'over';
-        this.sidenav.fixedTopGap = 64;
+        setTimeout(() => {
+          this.tablet = true;
+          this.sidenav.opened = false;
+          this.sidenav.mode = 'over';
+          this.sidenav.fixedTopGap = 64;
+        });
       }
     });
 
     breakpointObserver.observe(Breakpoints.Web).subscribe(result => {
       if (result.matches) {
-        this.web = true;
-        this.sidenav.opened = true;
-        this.sidenav.mode = 'side';
-        this.sidenav.fixedTopGap = 64;
+        setTimeout(() => {
+          this.web = true;
+          this.sidenav.opened = true;
+          this.sidenav.mode = 'side';
+          this.sidenav.fixedTopGap = 64;
+        });
       }
     });
   }
@@ -58,9 +66,19 @@ export class TemplateComponent implements OnDestroy, OnInit {
   ngOnDestroy(): void {
   }
 
-  ngOnInit() {
+  ngAfterViewInit() {
     const topAppBarElement = document.querySelector('.mdc-top-app-bar');
     const topAppBar = new MDCTopAppBar(topAppBarElement);
+  }
+
+  changeSidebarType(type, sidenav) {
+    sidenav.close();
+    setTimeout(() => {
+      this.sidebarType = type;
+      setTimeout(() => {
+        sidenav.open();
+      }, 200);
+    }, 500);
   }
 
 }
