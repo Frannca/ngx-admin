@@ -28,36 +28,44 @@ export class TemplateComponent implements OnDestroy, AfterViewInit {
 
   sidebarType = 'simple';
 
+  gridListCols = 4;
+
   constructor(breakpointObserver: BreakpointObserver) {
-    breakpointObserver.observe(Breakpoints.Handset).subscribe(result => {
+    breakpointObserver.observe(Breakpoints.Small).subscribe(result => {
       if (result.matches) {
         setTimeout(() => {
           this.handset = true;
           this.sidenav.opened = false;
           this.sidenav.mode = 'over';
           this.sidenav.fixedTopGap = 56;
+
+          this.gridListCols = 1;
         });
       }
     });
 
-    breakpointObserver.observe(Breakpoints.Tablet).subscribe(result => {
+    breakpointObserver.observe(Breakpoints.Medium).subscribe(result => {
       if (result.matches) {
         setTimeout(() => {
           this.tablet = true;
           this.sidenav.opened = false;
           this.sidenav.mode = 'over';
           this.sidenav.fixedTopGap = 64;
+
+          this.gridListCols = 2;
         });
       }
     });
 
-    breakpointObserver.observe(Breakpoints.Web).subscribe(result => {
+    breakpointObserver.observe(Breakpoints.Large).subscribe(result => {
       if (result.matches) {
         setTimeout(() => {
           this.web = true;
           this.sidenav.opened = true;
           this.sidenav.mode = 'side';
           this.sidenav.fixedTopGap = 64;
+
+          this.gridListCols = 4;
         });
       }
     });
@@ -72,13 +80,15 @@ export class TemplateComponent implements OnDestroy, AfterViewInit {
   }
 
   changeSidebarType(type, sidenav) {
-    sidenav.close();
-    setTimeout(() => {
-      this.sidebarType = type;
+    if (this.sidebarType !== type) {
+      sidenav.close();
       setTimeout(() => {
-        sidenav.open();
-      }, 200);
-    }, 500);
+        this.sidebarType = type;
+        setTimeout(() => {
+          sidenav.open();
+        }, 200);
+      }, 500);
+    }
   }
 
 }

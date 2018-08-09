@@ -624,9 +624,9 @@
           </div>
         </div>
 
-        <h5 class="frannca-title mdc-typography--headline5">Options</h5>
+        <h5 class="frannca-title mdc-typography--headline5">Sidenav Options</h5>
 
-        <mat-grid-list cols="4" rowHeight="100px" gutterSize="20" class="sidenav-options">
+        <mat-grid-list [cols]="gridListCols" rowHeight="100px" gutterSize="20" class="sidenav-options">
           <mat-grid-tile>
             <button mat-flat-button [ngClass]="{'inactive': sidebarType != 'simple'}" (click)="changeSidebarType('simple', snav)">Simple</button>
           </mat-grid-tile>
