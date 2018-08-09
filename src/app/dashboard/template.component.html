@@ -1,8 +1,23 @@
-<header class="mdc-top-app-bar">
+<header class="mdc-top-app-bar mdc-top-app-bar--fixed mat-elevation-z4">
   <div class="mdc-top-app-bar__row">
-    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start mat-elevation-z4">
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
       <a (click)="snav.toggle()" class="material-icons mdc-top-app-bar__navigation-icon">menu</a>
       <span class="mdc-top-app-bar__title">Frannca ngx-admin</span>
+    </section>
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>face</mat-icon>
+          <span>Profile</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>power_settings_new</mat-icon>
+          <span>Sign out</span>
+        </button>
+      </mat-menu>
     </section>
   </div>
 </header>

@@ -10,6 +10,7 @@ import {
   MatGridListModule,
   MatIconModule,
   MatListModule,
+  MatMenuModule,
   MatSidenavModule,
   MatToolbarModule
 } from '@angular/material';
@@ -27,6 +28,7 @@ import { TemplateComponent } from './template.component';
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
+    MatMenuModule,
     MatListModule,
     MatCardModule,
     MatButtonToggleModule,
