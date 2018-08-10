@@ -36,7 +36,7 @@ import { TemplateComponent } from './template.component';
     DashboardRoutingModule
   ],
   declarations: [
-    TemplateComponent
+    TemplateComponent,
   ]
 })
 export class DashboardModule { }
