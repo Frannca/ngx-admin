@@ -31,7 +31,7 @@ export class TemplateComponent implements OnDestroy, AfterViewInit {
   gridListCols = 4;
 
   constructor(breakpointObserver: BreakpointObserver) {
-    breakpointObserver.observe(Breakpoints.Small).subscribe(result => {
+    breakpointObserver.observe(Breakpoints.Handset).subscribe(result => {
       if (result.matches) {
         setTimeout(() => {
           this.handset = true;
@@ -44,7 +44,7 @@ export class TemplateComponent implements OnDestroy, AfterViewInit {
       }
     });
 
-    breakpointObserver.observe(Breakpoints.Medium).subscribe(result => {
+    breakpointObserver.observe(Breakpoints.Tablet).subscribe(result => {
       if (result.matches) {
         setTimeout(() => {
           this.tablet = true;
@@ -57,7 +57,7 @@ export class TemplateComponent implements OnDestroy, AfterViewInit {
       }
     });
 
-    breakpointObserver.observe(Breakpoints.Large).subscribe(result => {
+    breakpointObserver.observe(Breakpoints.Web).subscribe(result => {
       if (result.matches) {
         setTimeout(() => {
           this.web = true;
