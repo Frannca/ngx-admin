@@ -1,7 +1,7 @@
-<div fxLayout fxLayoutAlign="center center" fxFlexFill fxLayoutGap="50px" class="frannca-login">
+<div fxLayout fxLayoutAlign="center center" fxFlexFill fxLayoutGap="50px">
   <div fxFlex.xs="100%" fxFlex.sm="60%" fxFlex.md="40%" fxFlex.lg="30%" fxFlex.xl="20%">
     <div fxLayout="column">
-        <form class="example-form">
+        <form class="example-form" [class.mat-elevation-z2]="!smallDevice" class="frannca-login" [class.frannca-login-small]="smallDevice">
           <div fxLayout="row wrap">
             <mat-form-field fxFlex="100%">
               <input matInput placeholder="Email">
@@ -10,16 +10,21 @@
               <input matInput type="password" placeholder="Password">
             </mat-form-field>
 
-            <div fxLayout fxFlexFill fxLayoutAlign="space-between center">
-              <div>
-                <button mat-stroked-button color="primary">Register</button>
+            <div fxLayout fxFlexFill fxLayoutAlign="space-between center" fxLayoutGap.xs="20px">
+              <div fxFlex.xs="50%" fxFlex="100%">
+                <button mat-stroked-button color="primary" [class.frannca-fluid]="smallDevice">Register</button>
               </div>
-              <div>
-                <button mat-flat-button>Sign in</button>
+              <div fxFlex.xs="50%">
+                <button mat-flat-button [class.frannca-fluid]="smallDevice">Sign in</button>
               </div>
             </div>
           </div>
         </form>
+        <div fxLayout fxFlexFill fxLayoutAlign="center center">
+          <div class="frannca-forgot-password">
+            <a href="">Forgot password?</a>
+          </div>
+        </div>
     </div>
   </div>
 </div>

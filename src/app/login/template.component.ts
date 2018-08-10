@@ -1,3 +1,7 @@
+import {
+  BreakpointObserver,
+  Breakpoints
+} from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplateComponent implements OnInit {
 
-  constructor() { }
+  smallDevice = false;
+
+  constructor(breakpointObserver: BreakpointObserver) {
+    breakpointObserver.observe(Breakpoints.XSmall).subscribe(result => {
+      if (result.matches) {
+        this.smallDevice = true;
+      } else {
+        this.smallDevice = false;
+      }
+    });
+  }
 
   ngOnInit() {
   }
