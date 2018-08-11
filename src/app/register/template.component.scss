@@ -1,0 +1,22 @@
+.frannca-fluid {
+  width: 100%;
+}
+
+.frannca-login {
+  padding: 30px;
+
+  &.frannca-login-small {
+    padding-bottom: 4px;
+  }
+}
+
+.frannca-forgot-password {
+  margin: 6px 0;
+
+  a {
+    color: #757575;
+    font-size: 0.8rem;
+    text-decoration: none;
+  }
+}
+

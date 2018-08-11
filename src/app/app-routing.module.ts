@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: 'src/app/login/login.module#LoginModule'
+  },
+  {
+    path: 'register',
+    loadChildren: 'src/app/register/register.module#RegisterModule'
   }
 ];
 

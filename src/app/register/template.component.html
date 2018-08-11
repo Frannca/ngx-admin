@@ -1,3 +1,33 @@
-<p>
-  template works!
-</p>
+<div fxLayout fxLayoutAlign="center center" fxFlexFill fxLayoutGap="50px">
+  <div fxFlex.xs="100%" fxFlex.sm="60%" fxFlex.md="40%" fxFlex.lg="30%" fxFlex.xl="20%">
+    <div fxLayout="column">
+      <form action="/" class="example-form" [class.mat-elevation-z2]="!smallDevice" class="frannca-login" [class.frannca-login-small]="smallDevice">
+        <div fxLayout="row wrap">
+          <mat-form-field fxFlex="100%">
+            <input matInput placeholder="Name">
+          </mat-form-field>
+          <mat-form-field fxFlex="100%">
+            <input matInput placeholder="Email">
+          </mat-form-field>
+          <mat-form-field fxFlex="100%">
+            <input matInput type="password" placeholder="Password">
+          </mat-form-field>
+
+          <div fxLayout fxFlexFill fxLayoutAlign="space-between center" fxLayoutGap.xs="20px">
+            <div fxFlex.xs="50%" fxFlex="100%">
+              <a mat-stroked-button color="primary" [class.frannca-fluid]="smallDevice" [routerLink]="['/login']">Sign in</a>
+            </div>
+            <div fxFlex.xs="50%">
+              <button mat-flat-button [class.frannca-fluid]="smallDevice">Register</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div fxLayout fxFlexFill fxLayoutAlign="center center">
+        <div class="frannca-forgot-password">
+          <a href="">Forgot password?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
