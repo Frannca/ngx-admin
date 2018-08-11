@@ -6,7 +6,7 @@ import {
   MatInputModule
 } from '@angular/material';
 
-import { LoginRoutingModule } from './login-routing.module';
+import { SignInRoutingModule } from './sign-in-routing.module';
 import { TemplateComponent } from './template.component';
 
 @NgModule({
@@ -15,10 +15,10 @@ import { TemplateComponent } from './template.component';
     FlexLayoutModule,
     MatInputModule,
     MatButtonModule,
-    LoginRoutingModule
+    SignInRoutingModule
   ],
   declarations: [
     TemplateComponent
   ]
 })
-export class LoginModule { }
+export class SignInModule { }

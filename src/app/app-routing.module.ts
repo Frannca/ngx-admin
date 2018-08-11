@@ -7,8 +7,8 @@ const routes: Routes = [
     loadChildren: 'src/app/dashboard/dashboard.module#DashboardModule'
   },
   {
-    path: 'login',
-    loadChildren: 'src/app/login/login.module#LoginModule'
+    path: 'sign-in',
+    loadChildren: 'src/app/sign-in/sign-in.module#SignInModule'
   },
   {
     path: 'register',
