@@ -1,41 +1,17 @@
 import {
-  animate,
-  style,
-  transition,
-  trigger
-} from '@angular/animations';
-import {
   BreakpointObserver,
   Breakpoints
 } from '@angular/cdk/layout';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { fadeInOut } from '../_animations/fade-in-out';
 
 @Component({
   selector: 'app-template',
   templateUrl: './template.component.html',
   styleUrls: ['./template.component.scss'],
   animations: [
-    trigger('fadeInOut', [
-      transition('void => *', [
-        style({
-          transform: 'scale3d(0.3, 0.3, 0.3)',
-          opacity: 0.5
-        }),
-        animate(250, style({
-          transform: 'scale3d(1, 1, 1)',
-          opacity: 1
-        }))
-      ]),
-      transition('* => void', [
-        style({
-          opacity: 1
-        }),
-        animate(200, style({
-          opacity: 0
-        }))
-      ]),
-    ])
+    fadeInOut
   ]
 })
 export class TemplateComponent {
