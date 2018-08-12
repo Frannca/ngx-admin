@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
   templateUrl: './template.component.html',
   styleUrls: ['./template.component.scss'],
   animations: [
-    trigger('flyInOut', [
+    trigger('fadeInOut', [
       transition('void => *', [
         style({
           transform: 'scale3d(0.3, 0.3, 0.3)',
@@ -29,11 +29,9 @@ import { Router } from '@angular/router';
       ]),
       transition('* => void', [
         style({
-          // transform: 'scale3d(1, 1, 1)',
           opacity: 1
         }),
         animate(200, style({
-          // transform: 'scale3d(0.3, 0.3, 0.3)',
           opacity: 0
         }))
       ]),
