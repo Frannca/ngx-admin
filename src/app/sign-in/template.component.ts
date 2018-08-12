@@ -1,19 +1,54 @@
 import {
+  animate,
+  style,
+  transition,
+  trigger
+} from '@angular/animations';
+import {
   BreakpointObserver,
   Breakpoints
 } from '@angular/cdk/layout';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-template',
   templateUrl: './template.component.html',
-  styleUrls: ['./template.component.scss']
+  styleUrls: ['./template.component.scss'],
+  animations: [
+    trigger('flyInOut', [
+      transition('void => *', [
+        style({
+          transform: 'scale3d(0.3, 0.3, 0.3)',
+          opacity: 0.5
+        }),
+        animate(250, style({
+          transform: 'scale3d(1, 1, 1)',
+          opacity: 1
+        }))
+      ]),
+      transition('* => void', [
+        style({
+          // transform: 'scale3d(1, 1, 1)',
+          opacity: 1
+        }),
+        animate(200, style({
+          // transform: 'scale3d(0.3, 0.3, 0.3)',
+          opacity: 0
+        }))
+      ]),
+    ])
+  ]
 })
-export class TemplateComponent implements OnInit {
+export class TemplateComponent {
 
   smallDevice = false;
+  loaded = true;
 
-  constructor(breakpointObserver: BreakpointObserver) {
+  constructor(
+    private router: Router,
+    breakpointObserver: BreakpointObserver
+  ) {
     breakpointObserver.observe(Breakpoints.XSmall).subscribe(result => {
       if (result.matches) {
         this.smallDevice = true;
@@ -23,7 +58,15 @@ export class TemplateComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
+  changeRoute(route) {
+    this.loaded = false;
+    setTimeout(() => {
+      this.router.navigate([route]);
+    }, 200);
+  }
+
+  signIn() {
+    this.changeRoute('/');
   }
 
 }

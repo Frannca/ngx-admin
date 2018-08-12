@@ -1,6 +1,5 @@
-.frannca-fluid {
-  width: 100%;
-}
+@import "~@material/animation/variables";
+@import "~@material/animation/functions";
 
 .frannca-login {
   padding: 30px;
@@ -9,6 +8,30 @@
     padding-bottom: 4px;
   }
 }
+
+.frannca-login--no-animating {
+  transition: mdc-animation-exit-permanent(opacity, 175ms, 150ms);
+  opacity: 0;
+  will-change: opacity;
+}
+
+.frannca-login--animating {
+  animation: foo-keyframe 175ms $mdc-animation-standard-curve-timing-function;
+  transition: mdc-animation-enter(opacity, 375ms);
+  opacity: 1;
+}
+
+.frannca-fluid {
+  width: 100%;
+}
+
+//.frannca-login {
+//  padding: 30px;
+//
+//  &.frannca-login-small {
+//    padding-bottom: 4px;
+//  }
+//}
 
 .frannca-forgot-password {
   margin: 6px 0;
