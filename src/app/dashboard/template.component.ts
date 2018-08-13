@@ -8,20 +8,26 @@ import {
   OnDestroy,
 } from '@angular/core';
 import { MDCTopAppBar } from '@material/top-app-bar/index';
-import { fadeInOut } from '../_animations/fade-in-out';
+import { fadeInOutLarge } from '../_animations/fade-in-out-large';
+import { slideInOutDown } from '../_animations/slide-in-out-down';
+import { slideInOutRight } from '../_animations/slide-in-out-right';
+import { slideInOutUp } from '../_animations/slide-in-out-up';
 
 @Component({
   selector: 'app-template',
   templateUrl: './template.component.html',
   styleUrls: ['./template.component.scss'],
   animations: [
-    fadeInOut
+    fadeInOutLarge,
+    slideInOutDown,
+    slideInOutRight,
+    slideInOutUp
   ]
 })
 export class TemplateComponent implements OnDestroy, AfterViewInit {
 
   sidenav = {
-    opened: true,
+    opened: false,
     mode: 'side',
     fixedTopGap: 64,
   };
