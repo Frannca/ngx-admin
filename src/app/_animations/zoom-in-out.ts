@@ -5,7 +5,7 @@ import {
   trigger
 } from '@angular/animations';
 
-export let zoomInSmall = [
+export let zoomInOutSmall = [
   trigger('zoomInSmall', [
     transition('void => *', [
       style({
@@ -15,10 +15,7 @@ export let zoomInSmall = [
         transform: 'scale3d(1, 1, 1)',
       }))
     ]),
-  ])
-];
-
-export let zoomOutSmall = [
+  ]),
   trigger('zoomOutSmall', [
     transition('* => void', [
       style({
@@ -31,7 +28,7 @@ export let zoomOutSmall = [
   ])
 ];
 
-export let zoomInMedium = [
+export let zoomInOutMedium = [
   trigger('zoomInMedium', [
     transition('void => *', [
       style({
@@ -41,10 +38,7 @@ export let zoomInMedium = [
         transform: 'scale3d(1, 1, 1)',
       }))
     ]),
-  ])
-];
-
-export let zoomOutMedium = [
+  ]),
   trigger('zoomOutMedium', [
     transition('* => void', [
       style({
@@ -57,7 +51,7 @@ export let zoomOutMedium = [
   ])
 ];
 
-export let zoomInLarge = [
+export let zoomInOutLarge = [
   trigger('zoomInLarge', [
     transition('void => *', [
       style({
@@ -67,10 +61,7 @@ export let zoomInLarge = [
         transform: 'scale3d(1, 1, 1)',
       }))
     ]),
-  ])
-];
-
-export let zoomOutLarge = [
+  ]),
   trigger('zoomOutLarge', [
     transition('* => void', [
       style({

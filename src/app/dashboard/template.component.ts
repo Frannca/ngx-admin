@@ -8,10 +8,8 @@ import {
   OnDestroy,
 } from '@angular/core';
 import { MDCTopAppBar } from '@material/top-app-bar/index';
-import { fadeInOutLarge } from '../_animations/fade-in-out-large';
-import { slideInOutDown } from '../_animations/slide-in-out-down';
-import { slideInOutRight } from '../_animations/slide-in-out-right';
-import { slideInOutUp } from '../_animations/slide-in-out-up';
+import { fadeInOutLarge } from '../_animations/fade-in-out';
+import { slideInOutDownSmall } from '../_animations/slide-in-out-down';
 
 @Component({
   selector: 'app-template',
@@ -19,9 +17,7 @@ import { slideInOutUp } from '../_animations/slide-in-out-up';
   styleUrls: ['./template.component.scss'],
   animations: [
     fadeInOutLarge,
-    slideInOutDown,
-    slideInOutRight,
-    slideInOutUp
+    slideInOutDownSmall
   ]
 })
 export class TemplateComponent implements OnDestroy, AfterViewInit {

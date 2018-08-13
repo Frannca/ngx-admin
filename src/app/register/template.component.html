@@ -1,6 +1,6 @@
 <div fxLayout fxLayoutAlign="center center" fxFlexFill fxLayoutGap="50px">
   <div fxFlex.xs="100%" fxFlex.sm="60%" fxFlex.md="40%" fxFlex.lg="30%" fxFlex.xl="20%">
-    <div fxLayout="column" *ngIf="loaded" @fadeInOut>
+    <div fxLayout="column" *ngIf="loaded" @fadeInMedium @zoomInMedium @fadeOutMedium>
       <form action="/" class="example-form" [class.mat-elevation-z2]="!smallDevice" class="frannca-login" [class.frannca-login-small]="smallDevice">
         <h2 class="mat-title">Register</h2>
         <div fxLayout="row wrap">
