@@ -27,6 +27,28 @@
 
     <mat-sidenav #snav [opened]="sidenav.opened" [mode]="sidenav.mode" [fixedInViewport]="true" [fixedTopGap]="sidenav.fixedTopGap" class="mat-elevation-z2">
 
+      <!-- Main -->
+      <mat-nav-list role="navigation" *ngIf="sidebarType == 'main'">
+        <mat-list-item>
+          <mat-icon matListIcon>dashboard</mat-icon>
+          <a matLine [routerLink]="['/']">Dashboard</a>
+        </mat-list-item>
+        <h3 matSubheader>Pages</h3>
+        <mat-list-item>
+          <mat-icon matListIcon>exit_to_app</mat-icon>
+          <a matLine [routerLink]="['/sign-in']">Sign In</a>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>person_add</mat-icon>
+          <a matLine [routerLink]="['/register']">Register</a>
+        </mat-list-item>
+        <h3 matSubheader>Navigation</h3>
+        <mat-list-item>
+          <img matListIcon class="frannca-svg" src="./assets/icons/side_navigation.svg">
+          <a matLine [routerLink]="['/']">Sidenav</a>
+        </mat-list-item>
+      </mat-nav-list>
+
       <!-- Simple -->
       <mat-nav-list role="navigation" *ngIf="sidebarType == 'simple'">
         <a mat-list-item [routerLink]="['/navigation']">This is a simplel link</a>

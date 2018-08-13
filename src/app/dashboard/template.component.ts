@@ -32,7 +32,7 @@ export class TemplateComponent implements OnDestroy, AfterViewInit {
   tablet = false;
   web = false;
 
-  sidebarType = 'simple';
+  sidebarType = 'main';
 
   constructor(breakpointObserver: BreakpointObserver) {
     breakpointObserver.observe(Breakpoints.Handset).subscribe(result => {
