@@ -2,16 +2,11 @@
   "name": "ngx-admin",
   "version": "0.0.0-development",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
     "travis-deploy-once": "travis-deploy-once",
-    "semantic-release": "semantic-release"
+    "semantic-release": "cd dist && semantic-release"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^6.1.2",
     "@angular/cdk": "^6.4.3",
@@ -60,5 +55,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Frannca/ngx-admin.git"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
