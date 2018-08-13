@@ -8,11 +8,15 @@ import {
   OnDestroy,
 } from '@angular/core';
 import { MDCTopAppBar } from '@material/top-app-bar/index';
+import { fadeInOut } from '../_animations/fade-in-out';
 
 @Component({
   selector: 'app-template',
   templateUrl: './template.component.html',
-  styleUrls: ['./template.component.scss']
+  styleUrls: ['./template.component.scss'],
+  animations: [
+    fadeInOut
+  ]
 })
 export class TemplateComponent implements OnDestroy, AfterViewInit {
 
