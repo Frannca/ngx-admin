@@ -1,0 +1,46 @@
+.red {
+  background-color: red;
+}
+
+.frannca-flex-list {
+  background-color: white;
+  padding: 1rem;
+}
+
+.example-expansion-panel {
+  box-shadow: none !important;
+}
+
+.example-expansion-panel-header {
+  padding: 0 16px;
+
+  .example-icon {
+    padding: 4px;
+  }
+
+  .example-panel-title {
+    line-height: 32px;
+    padding-left: 16px;
+  }
+}
+
+.frannca-title {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.87);
+  margin-bottom: 20px;
+}
+
+.button-row {
+  display: inline-flex;
+
+  &.handset {
+    display: block;
+  }
+
+  a {
+    margin-right: 8px;
+  }
+}
+
+.frannca-content {
+  margin-bottom: 20px;
+}
