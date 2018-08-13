@@ -2,9 +2,8 @@
   "name": "ngx-admin",
   "version": "0.0.0-development",
   "scripts": {
-    "build": "ng build",
     "travis-deploy-once": "travis-deploy-once",
-    "semantic-release": "cd dist/ngx-admin && semantic-release"
+    "semantic-release": "semantic-release"
   },
   "private": false,
   "dependencies": {
