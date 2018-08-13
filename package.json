@@ -1,5 +1,5 @@
 {
-  "name": "ngx-admin",
+  "name": "@frannca/ngx-admin",
   "version": "0.0.0-development",
   "scripts": {
     "travis-deploy-once": "travis-deploy-once",
