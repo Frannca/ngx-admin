@@ -5,13 +5,15 @@ import {
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { fadeInOut } from '../_animations/fade-in-out';
+import { zoomInMedium } from '../_animations/zoom-in-out';
 
 @Component({
   selector: 'app-template',
   templateUrl: './template.component.html',
   styleUrls: ['./template.component.scss'],
   animations: [
-    fadeInOut
+    fadeInOut,
+    zoomInMedium
   ]
 })
 export class TemplateComponent {
