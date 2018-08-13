@@ -4,7 +4,7 @@
   "scripts": {
     "build": "ng build",
     "travis-deploy-once": "travis-deploy-once",
-    "semantic-release": "cd dist && semantic-release"
+    "semantic-release": "cd/ngx-admin dist && semantic-release"
   },
   "private": false,
   "dependencies": {
