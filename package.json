@@ -1,13 +1,15 @@
 {
   "name": "ngx-admin",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "private": true,
   "dependencies": {
@@ -51,6 +53,12 @@
     "stylelint-config-standard": "^18.2.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
-    "typescript": "~2.7.2"
+    "typescript": "~2.7.2",
+    "travis-deploy-once": "^5.0.2",
+    "semantic-release": "^15.9.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Frannca/ngx-admin.git"
   }
 }
