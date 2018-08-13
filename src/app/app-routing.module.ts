@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: 'src/app/register/register.module#RegisterModule'
-  }
+  },
 ];
 
 @NgModule({

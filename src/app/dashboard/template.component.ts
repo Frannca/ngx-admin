@@ -34,8 +34,6 @@ export class TemplateComponent implements OnDestroy, AfterViewInit {
 
   sidebarType = 'simple';
 
-  gridListCols = 4;
-
   constructor(breakpointObserver: BreakpointObserver) {
     breakpointObserver.observe(Breakpoints.Handset).subscribe(result => {
       if (result.matches) {
@@ -44,8 +42,6 @@ export class TemplateComponent implements OnDestroy, AfterViewInit {
           this.sidenav.opened = false;
           this.sidenav.mode = 'over';
           this.sidenav.fixedTopGap = 56;
-
-          this.gridListCols = 1;
         });
       }
     });
@@ -57,8 +53,6 @@ export class TemplateComponent implements OnDestroy, AfterViewInit {
           this.sidenav.opened = false;
           this.sidenav.mode = 'over';
           this.sidenav.fixedTopGap = 64;
-
-          this.gridListCols = 2;
         });
       }
     });
@@ -70,8 +64,6 @@ export class TemplateComponent implements OnDestroy, AfterViewInit {
           this.sidenav.opened = true;
           this.sidenav.mode = 'side';
           this.sidenav.fixedTopGap = 64;
-
-          this.gridListCols = 4;
         });
       }
     });
@@ -83,18 +75,6 @@ export class TemplateComponent implements OnDestroy, AfterViewInit {
   ngAfterViewInit() {
     const topAppBarElement = document.querySelector('.mdc-top-app-bar');
     const topAppBar = new MDCTopAppBar(topAppBarElement);
-  }
-
-  changeSidebarType(type, sidenav) {
-    if (this.sidebarType !== type) {
-      sidenav.close();
-      setTimeout(() => {
-        this.sidebarType = type;
-        setTimeout(() => {
-          sidenav.open();
-        }, 200);
-      }, 500);
-    }
   }
 
 }

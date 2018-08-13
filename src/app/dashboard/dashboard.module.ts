@@ -16,6 +16,7 @@ import {
 } from '@angular/material';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import { DashboardComponent } from './dashboard.component';
 import { TemplateComponent } from './template.component';
 
 @NgModule({
@@ -36,7 +37,8 @@ import { TemplateComponent } from './template.component';
     DashboardRoutingModule
   ],
   declarations: [
-    TemplateComponent,
+    DashboardComponent,
+    TemplateComponent
   ]
 })
 export class DashboardModule { }

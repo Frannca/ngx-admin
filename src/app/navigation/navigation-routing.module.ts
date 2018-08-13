@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DashboardComponent } from './dashboard.component';
+import { NavigationComponent } from './navigation.component';
 import { TemplateComponent } from './template.component';
 
 const routes: Routes = [
@@ -10,18 +10,14 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: DashboardComponent
-      },
-      {
-        path: 'navigation',
-        loadChildren: 'src/app/navigation/navigation.module#NavigationModule'
+        component: NavigationComponent
       }
     ]
-  },
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class DashboardRoutingModule { }
+export class NavigationRoutingModule { }
