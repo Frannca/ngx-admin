@@ -1,4 +1,4 @@
-# Frannca ngx-login
+# Frannca ngx-admin
 
 Angular 6+ dashboard template (with Material Design)
 
