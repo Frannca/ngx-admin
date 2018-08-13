@@ -2,6 +2,7 @@
   "name": "@frannca/ngx-admin",
   "version": "0.0.0-development",
   "scripts": {
+    "github-pages": "ng build --prod --output-path docs --base-href https://frannca.github.io/ngx-admin/",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"
   },
