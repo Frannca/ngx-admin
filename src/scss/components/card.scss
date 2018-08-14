@@ -1,5 +1,5 @@
-.frannca-card {
-  &.frannca-card-link {
+.fra-card {
+  &.fra-card-link {
     cursor: pointer;
 
     &.disabled {
@@ -13,7 +13,19 @@
   }
 }
 
-.frannca-card-simple {
+.fra-card-simple {
   background-color: white;
   padding: 1rem;
+
+  .fra-card-buttons {
+    display: inline-flex;
+
+    &.handset {
+      display: block;
+    }
+
+    a {
+      margin-right: 8px;
+    }
+  }
 }
