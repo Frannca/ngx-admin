@@ -1,0 +1,11 @@
+.fra-container {
+  padding: 84px 20px 20px 20px;
+
+  &.fra-title {
+    border-bottom: solid 1px rgb(234, 234, 234);
+
+    h2 {
+      margin: 0;
+    }
+  }
+}
