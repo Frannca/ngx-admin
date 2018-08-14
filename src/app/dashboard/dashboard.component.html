@@ -1,21 +1,18 @@
-<div @fadeInLarge>
-  <div class="fra-container fra-title">
-    <h2 class="mat-title">Dashboard</h2>
-  </div>
+<div class="fra-container fra-title" @fadeInSmall>
+  <h2 class="mat-title">Dashboard</h2>
+</div>
 
-  <div class="fra-container">
-    <div fxLayout fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutAlign="center">
-      <mat-card [routerLink]="['/']" mat-ripple class="frannca-card frannca-card-link" fxFlex="25%">
-        <mat-card-content>
-          <mat-card-title>Pages</mat-card-title>
-          <p>ooi</p>
-        </mat-card-content>
-      </mat-card>
-      <mat-card [routerLink]="['/navigation']" mat-ripple class="frannca-card frannca-card-link" fxFlex="25%">
-        <mat-card-content>
-          <mat-card-title>Navigation</mat-card-title>
-        </mat-card-content>
-      </mat-card>
-    </div>
+<div class="fra-container" *ngIf="loaded">
+  <div fxLayout fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutAlign="center">
+    <mat-card [routerLink]="['/']" mat-ripple class="frannca-card frannca-card-link" fxFlex="25%" @zoomInMedium @fadeInMedium>
+      <mat-card-content>
+        <mat-card-title>Pages</mat-card-title>
+      </mat-card-content>
+    </mat-card>
+    <mat-card [routerLink]="['/navigation']" mat-ripple class="frannca-card frannca-card-link" fxFlex="25%" @zoomInMedium @fadeInMedium>
+      <mat-card-content>
+        <mat-card-title>Navigation</mat-card-title>
+      </mat-card-content>
+    </mat-card>
   </div>
 </div>

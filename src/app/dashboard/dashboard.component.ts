@@ -3,12 +3,17 @@ import {
   Breakpoints
 } from '@angular/cdk/layout';
 import {
+  AfterContentInit,
   Component,
   OnInit,
   ViewChild
 } from '@angular/core';
 import { MatSidenav } from '@angular/material';
-import { fadeInOutLarge } from '../_animations/fade-in-out';
+import {
+  fadeInOutMedium,
+  fadeInOutSmall
+} from '../_animations/fade-in-out';
+import { zoomInOutMedium, } from '../_animations/zoom-in-out';
 import { TemplateComponent } from './template.component';
 
 @Component({
@@ -16,10 +21,12 @@ import { TemplateComponent } from './template.component';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
   animations: [
-    fadeInOutLarge
+    fadeInOutSmall,
+    fadeInOutMedium,
+    zoomInOutMedium
   ]
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, AfterContentInit {
 
   @ViewChild('snav') sidenav: MatSidenav;
   @ViewChild(TemplateComponent) template: TemplateComponent;
@@ -30,6 +37,7 @@ export class DashboardComponent implements OnInit {
   web = false;
 
   sidebarType = 'simple';
+  loaded = false;
 
   constructor(breakpointObserver: BreakpointObserver) {
     breakpointObserver.observe(Breakpoints.Handset).subscribe(result => {
@@ -64,6 +72,13 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
+    setTimeout(() => {
+
+    }, 2000);
+  }
+
+  ngAfterContentInit() {
+    this.loaded = true;
   }
 
   /**
