@@ -1,0 +1,14 @@
+.frannca-card {
+  &.frannca-card-link {
+    cursor: pointer;
+
+    &.disabled {
+      cursor: default;
+      opacity: 0.3;
+    }
+  }
+
+  .mat-card-content:last-of-type {
+    margin-bottom: 0;
+  }
+}
