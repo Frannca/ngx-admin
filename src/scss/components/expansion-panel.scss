@@ -1,0 +1,16 @@
+.fra-expansion-panel {
+  box-shadow: none !important;
+}
+
+.fra-expansion-panel-header {
+  padding: 0 16px;
+
+  .fra-expansion-panel-icon {
+    padding: 4px;
+  }
+
+  .fra-panel-title {
+    line-height: 32px;
+    padding-left: 16px;
+  }
+}
