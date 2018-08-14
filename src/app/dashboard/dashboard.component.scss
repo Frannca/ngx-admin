@@ -8,3 +8,17 @@
     }
   }
 }
+
+.mat-card .last-child {
+  margin-bottom: 0;
+}
+
+.frannca-card {
+  &.frannca-card-link {
+    cursor: pointer;
+  }
+
+  .mat-card-content:last-of-type {
+    margin-bottom: 0;
+  }
+}

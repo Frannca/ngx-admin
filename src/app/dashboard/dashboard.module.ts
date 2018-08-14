@@ -12,7 +12,8 @@ import {
   MatListModule,
   MatMenuModule,
   MatSidenavModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatRippleModule
 } from '@angular/material';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
@@ -32,6 +33,7 @@ import { TemplateComponent } from './template.component';
     MatMenuModule,
     MatListModule,
     MatCardModule,
+    MatRippleModule,
     MatButtonToggleModule,
     FlexLayoutModule,
     DashboardRoutingModule
