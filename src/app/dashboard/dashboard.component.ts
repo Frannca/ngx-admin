@@ -8,12 +8,16 @@ import {
   ViewChild
 } from '@angular/core';
 import { MatSidenav } from '@angular/material';
+import { fadeInOutLarge } from '../_animations/fade-in-out';
 import { TemplateComponent } from './template.component';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
+  animations: [
+    fadeInOutLarge
+  ]
 })
 export class DashboardComponent implements OnInit {
 
