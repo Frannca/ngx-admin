@@ -1,6 +1,10 @@
 .fra-container {
   padding: 20px 20px 20px 20px;
 
+  .fra-container-row {
+    margin-top: 20px;
+  }
+
   &.fra-title {
     padding-top: 84px;
     border-bottom: solid 1px rgb(234, 234, 234);

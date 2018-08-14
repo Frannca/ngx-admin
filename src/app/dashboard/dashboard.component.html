@@ -3,15 +3,43 @@
 </div>
 
 <div class="fra-container" *ngIf="loaded">
-  <div fxLayout fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutAlign="center">
-    <mat-card [routerLink]="['/']" mat-ripple class="frannca-card frannca-card-link" fxFlex="25%" @zoomInMedium @fadeInMedium>
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutAlign="center">
+    <mat-card mat-ripple class="frannca-card frannca-card-link disabled" fxFlex="25%" @zoomInMedium @fadeInMedium>
       <mat-card-content>
         <mat-card-title>Pages</mat-card-title>
+      </mat-card-content>
+    </mat-card>
+    <mat-card mat-ripple class="frannca-card frannca-card-link disabled" fxFlex="25%" @zoomInMedium @fadeInMedium>
+      <mat-card-content>
+        <mat-card-title>Form Controls</mat-card-title>
       </mat-card-content>
     </mat-card>
     <mat-card [routerLink]="['/navigation']" mat-ripple class="frannca-card frannca-card-link" fxFlex="25%" @zoomInMedium @fadeInMedium>
       <mat-card-content>
         <mat-card-title>Navigation</mat-card-title>
+      </mat-card-content>
+    </mat-card>
+    <mat-card mat-ripple class="frannca-card frannca-card-link disabled" fxFlex="25%" @zoomInMedium @fadeInMedium>
+      <mat-card-content>
+        <mat-card-title>Layout</mat-card-title>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxLayoutAlign="center" class="fra-container-row">
+    <mat-card fxFlex mat-ripple class="frannca-card frannca-card-link disabled" @zoomInMedium @fadeInMedium>
+      <mat-card-content>
+        <mat-card-title>Buttons & Indicators</mat-card-title>
+      </mat-card-content>
+    </mat-card>
+    <mat-card fxFlex mat-ripple class="frannca-card frannca-card-link disabled" @zoomInMedium @fadeInMedium>
+      <mat-card-content>
+        <mat-card-title>Popups & Modals</mat-card-title>
+      </mat-card-content>
+    </mat-card>
+    <mat-card fxFlex mat-ripple class="frannca-card frannca-card-link disabled" @zoomInMedium @fadeInMedium>
+      <mat-card-content>
+        <mat-card-title>Data Table</mat-card-title>
       </mat-card-content>
     </mat-card>
   </div>
