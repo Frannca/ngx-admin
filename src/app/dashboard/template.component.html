@@ -29,24 +29,24 @@
 
       <!-- Main -->
       <mat-nav-list role="navigation" *ngIf="sidebarType == 'main'">
-        <mat-list-item>
+        <a [routerLink]="['/']" mat-list-item>
           <mat-icon matListIcon>dashboard</mat-icon>
-          <a matLine [routerLink]="['/']">Dashboard</a>
-        </mat-list-item>
+          <span matLine>Dashboard</span>
+        </a>
         <h3 matSubheader>Pages</h3>
-        <mat-list-item>
+        <a [routerLink]="['/sign-in']" mat-list-item>
           <mat-icon matListIcon>exit_to_app</mat-icon>
-          <a matLine [routerLink]="['/sign-in']">Sign In</a>
-        </mat-list-item>
-        <mat-list-item>
+          <span matLine>Sign In</span>
+        </a>
+        <a [routerLink]="['/register']" mat-list-item>
           <mat-icon matListIcon>person_add</mat-icon>
-          <a matLine [routerLink]="['/register']">Register</a>
-        </mat-list-item>
+          <span matLine>Register</span>
+        </a>
         <h3 matSubheader>Navigation</h3>
-        <mat-list-item>
+        <a [routerLink]="['/']" mat-list-item>
           <img matListIcon class="frannca-svg" src="./assets/icons/side_navigation.svg">
-          <a matLine [routerLink]="['/']">Sidenav</a>
-        </mat-list-item>
+          <span matLine>Sidenav</span>
+        </a>
       </mat-nav-list>
 
       <!-- Simple -->
