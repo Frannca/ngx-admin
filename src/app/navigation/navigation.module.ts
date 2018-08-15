@@ -10,6 +10,7 @@ import {
 import { NavigationRoutingModule } from './navigation-routing.module';
 import { NavigationComponent } from './navigation.component';
 import { TemplateComponent } from './template.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { TemplateComponent } from './template.component';
   ],
   declarations: [
     NavigationComponent,
-    TemplateComponent
+    TemplateComponent,
+    MenuComponent
   ]
 })
 export class NavigationModule { }
