@@ -3,4 +3,50 @@
 </div>
 
 <div class="fra-container">
+  <h5 class="fra-title mat-subheading-2" @fadeInSmall>Resources</h5>
+
+  <div class="fra-row">
+    <div fxLayout fxLayout.lt-md="column" fxLayoutGap="20px">
+
+      <!-- Menu -->
+      <div fxFlex="50%">
+        <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between" class="fra-card-simple mat-elevation-z2" @zoomInMedium @fadeInMedium>
+          <div fxLayout="column" fxFlex.xs="36px" fxLayoutAlign="center">
+            Menu
+            <span class="mat-caption"><a href="https://material.angular.io">material.angular.io</a></span>
+          </div>
+          <div class="fra-card-buttons">
+            <a href="https://github.com/angular/material2/tree/master/src/lib/menu" target="_blank" mat-flat-button>
+              <mat-icon>open_in_new</mat-icon>
+              Source
+            </a>
+            <a href="https://material.angular.io/components/menu/overview" target="_blank" mat-flat-button>
+              <mat-icon>open_in_new</mat-icon>
+              Documentation
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidenav -->
+      <div fxFlex="50%">
+        <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between" class="fra-card-simple mat-elevation-z2" @zoomInMedium @fadeInMedium>
+          <div fxLayout="column" fxFlex.xs="36px" fxLayoutAlign="center">
+            Sidenav
+            <span class="mat-caption"><a href="https://material.angular.io">material.angular.io</a></span>
+          </div>
+          <div class="fra-card-buttons">
+            <a href="https://github.com/angular/material2/blob/master/src/lib/sidenav" target="_blank" mat-flat-button>
+              <mat-icon>open_in_new</mat-icon>
+              Source
+            </a>
+            <a href="https://material.angular.io/components/sidenav/overview" target="_blank" mat-flat-button>
+              <mat-icon>open_in_new</mat-icon>
+              Documentation
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
