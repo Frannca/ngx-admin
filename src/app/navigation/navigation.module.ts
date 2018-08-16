@@ -1,16 +1,19 @@
 import { LayoutModule } from '@angular/cdk/layout';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {
   MatButtonModule,
-  MatIconModule
+  MatIconModule,
+  MatMenuModule,
+  MatTabsModule
 } from '@angular/material';
+import { HighlightModule } from 'ngx-highlightjs';
+import { MenuComponent } from './menu/menu.component';
 
 import { NavigationRoutingModule } from './navigation-routing.module';
 import { NavigationComponent } from './navigation.component';
 import { TemplateComponent } from './template.component';
-import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   imports: [
@@ -18,7 +21,10 @@ import { MenuComponent } from './menu/menu.component';
     LayoutModule,
     MatButtonModule,
     MatIconModule,
+    MatMenuModule,
+    MatTabsModule,
     NavigationRoutingModule,
+    HighlightModule.forRoot(),
     FlexLayoutModule
   ],
   declarations: [

@@ -3,12 +3,32 @@
 </div>
 
 <div class="fra-container">
-
   <h5 class="fra-title mat-subheading-2" @fadeInSmall>Examples</h5>
 
-  <div class="fra-card-simple mat-elevation-z2">
-    <h6 class="mat-subheading-1">Basic</h6>
-    teste
+  <div class="fra-card-simple mat-elevation-z2" @zoomInMedium>
+    <div class="fra-card-title">
+      <h6 class="mat-subheading-1">Basic</h6>
+    </div>
+    <div class="fra-card-content fra-card-align-center">
+      <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
+    <div class="fra-card-code">
+      <mat-tab-group>
+        <mat-tab label="HTML">
+          <pre><code highlight [language]="['html']" [code]="menuSimpleHtml"></code></pre>
+        </mat-tab>
+        <mat-tab label="TypeScript">
+          <pre><code highlight [language]="['typescript']" [code]="menuSimpleTypeScript"></code></pre>
+        </mat-tab>
+        <mat-tab label="CSS">
+          <pre><code highlight [language]="['css']" [code]="menuSimpleCss"></code></pre>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
   </div>
 
   <h5 class="fra-title mat-subheading-2" @fadeInSmall>Resources</h5>
@@ -17,8 +37,8 @@
     <div fxLayout fxLayout.lt-md="column" fxLayoutGap="20px">
 
       <!-- Menu -->
-      <div fxFlex="50%" class="fra-card-simple mat-elevation-z2">
-        <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between" class="fra-card-content" @zoomInMedium @fadeInMedium>
+      <div fxFlex="50%" class="fra-card-simple mat-elevation-z2" @zoomInMedium @fadeInMedium>
+        <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between" class="fra-card-content">
           <div fxLayout="column" fxFlex.xs="36px" fxLayoutAlign="center">
             Menu
             <span class="mat-caption"><a href="https://material.angular.io">material.angular.io</a></span>
@@ -37,8 +57,8 @@
       </div>
 
       <!-- Sidenav -->
-      <div fxFlex="50%" class="fra-card-simple mat-elevation-z2">
-        <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between" class="fra-card-content" @zoomInMedium @fadeInMedium>
+      <div fxFlex="50%" class="fra-card-simple mat-elevation-z2" @zoomInMedium @fadeInMedium>
+        <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between" class="fra-card-content">
           <div fxLayout="column" fxFlex.xs="36px" fxLayoutAlign="center">
             Sidenav
             <span class="mat-caption"><a href="https://material.angular.io">material.angular.io</a></span>

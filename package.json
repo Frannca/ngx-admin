@@ -26,6 +26,7 @@
     "@material/top-app-bar": "^0.38.0",
     "@material/typography": "^0.38.0",
     "core-js": "^2.5.4",
+    "ngx-highlightjs": "^2.1.1",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },

@@ -16,8 +16,29 @@
 .fra-card-simple {
   background-color: white;
 
+  .fra-card-title {
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 1rem;
+
+    h6 {
+      margin-bottom: 0;
+    }
+  }
+
   .fra-card-content {
     padding: 1rem;
+
+    &.fra-card-align-center {
+      text-align: center;
+    }
+  }
+
+  .fra-card-code {
+    border-top: solid 1px #eaeaea;
+
+    pre {
+      margin: 0;
+    }
   }
 
   .fra-card-buttons {
