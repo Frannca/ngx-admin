@@ -1,3 +1,7 @@
 .fra-title {
   border-bottom: solid 1px #eaeaea;
+
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
 }

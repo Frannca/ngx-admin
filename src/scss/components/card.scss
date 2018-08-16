@@ -15,7 +15,10 @@
 
 .fra-card-simple {
   background-color: white;
-  padding: 1rem;
+
+  .fra-card-content {
+    padding: 1rem;
+  }
 
   .fra-card-buttons {
     display: inline-flex;
@@ -24,7 +27,7 @@
       display: block;
     }
 
-    a {
+    a:not(:last-child) {
       margin-right: 8px;
     }
   }

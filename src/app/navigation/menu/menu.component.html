@@ -3,14 +3,22 @@
 </div>
 
 <div class="fra-container">
+
+  <h5 class="fra-title mat-subheading-2" @fadeInSmall>Examples</h5>
+
+  <div class="fra-card-simple mat-elevation-z2">
+    <h6 class="mat-subheading-1">Basic</h6>
+    teste
+  </div>
+
   <h5 class="fra-title mat-subheading-2" @fadeInSmall>Resources</h5>
 
   <div class="fra-row">
     <div fxLayout fxLayout.lt-md="column" fxLayoutGap="20px">
 
       <!-- Menu -->
-      <div fxFlex="50%">
-        <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between" class="fra-card-simple mat-elevation-z2" @zoomInMedium @fadeInMedium>
+      <div fxFlex="50%" class="fra-card-simple mat-elevation-z2">
+        <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between" class="fra-card-content" @zoomInMedium @fadeInMedium>
           <div fxLayout="column" fxFlex.xs="36px" fxLayoutAlign="center">
             Menu
             <span class="mat-caption"><a href="https://material.angular.io">material.angular.io</a></span>
@@ -29,8 +37,8 @@
       </div>
 
       <!-- Sidenav -->
-      <div fxFlex="50%">
-        <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between" class="fra-card-simple mat-elevation-z2" @zoomInMedium @fadeInMedium>
+      <div fxFlex="50%" class="fra-card-simple mat-elevation-z2">
+        <div fxLayout fxLayout.xs="column" fxLayoutAlign="space-between" class="fra-card-content" @zoomInMedium @fadeInMedium>
           <div fxLayout="column" fxFlex.xs="36px" fxLayoutAlign="center">
             Sidenav
             <span class="mat-caption"><a href="https://material.angular.io">material.angular.io</a></span>
