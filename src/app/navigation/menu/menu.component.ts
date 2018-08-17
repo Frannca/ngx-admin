@@ -45,6 +45,41 @@ export class MenuComponent implements AfterContentInit {
     /** No CSS for this example */
   `;
 
+  menuIconHtml = `
+  <button mat-button [matMenuTriggerFor]="menuIcon">
+    Menu
+  </button>
+  <mat-menu #menuIcon="matMenu">
+    <button mat-menu-item>
+      <mat-icon>favorite</mat-icon>
+      <span>Love</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>thumb_up</mat-icon>
+      <span>Like</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>thumb_down</mat-icon>
+      <span>Dislike</span>
+    </button>
+  </mat-menu>
+  `;
+
+  menuIconTypeScript = `
+  import { MatMenuModule } from '@angular/material';
+  
+  @NgModule({
+    imports: [
+      MatMenuModule,
+    ],
+  })
+  export class SomeModule { }
+  `;
+
+  menuIconCss = `
+  /** No CSS for this example */
+  `;
+
   constructor() { }
 
   ngAfterContentInit() {
