@@ -23,7 +23,7 @@ export class MenuComponent implements AfterContentInit {
   loaded = false;
 
   menuSimpleHtml = `
-  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <button mat-button [matMenuTriggerFor]="menu">Basic Menu</button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item>Item 1</button>
     <button mat-menu-item>Item 2</button>
@@ -46,9 +46,7 @@ export class MenuComponent implements AfterContentInit {
   `;
 
   menuIconHtml = `
-  <button mat-button [matMenuTriggerFor]="menuIcon">
-    Menu
-  </button>
+  <button mat-button [matMenuTriggerFor]="menuIcon">Icon Menu</button>
   <mat-menu #menuIcon="matMenu">
     <button mat-menu-item>
       <mat-icon>favorite</mat-icon>
