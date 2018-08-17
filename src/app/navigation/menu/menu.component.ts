@@ -23,26 +23,26 @@ export class MenuComponent implements AfterContentInit {
   loaded = false;
 
   menuSimpleHtml = `
-    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
-    </mat-menu>
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
   `;
 
   menuSimpleTypeScript = `
-    import { MatMenuModule } from '@angular/material';
-    
-    @NgModule({
-      imports: [
-        MatMenuModule,
-      ],
-    })
-    export class SomeModule { }
+  import { MatMenuModule } from '@angular/material';
+ 
+  @NgModule({
+    imports: [
+      MatMenuModule,
+    ],
+  })
+  export class SomeModule { }
   `;
 
   menuSimpleCss = `
-    /** No CSS for this example */
+  /** No CSS for this example */
   `;
 
   menuIconHtml = `
