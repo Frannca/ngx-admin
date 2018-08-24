@@ -78,6 +78,55 @@ export class MenuComponent implements AfterContentInit {
   /** No CSS for this example */
   `;
 
+  menuCustomPositionHtml = `
+  <button mat-icon-button [matMenuTriggerFor]="menuBefore">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+  </button>
+  <mat-menu #menuBefore="matMenu" xPosition="before">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+
+  <button mat-icon-button [matMenuTriggerFor]="menuAfter">
+    <mat-icon>keyboard_arrow_right</mat-icon>
+  </button>
+  <mat-menu #menuAfter="matMenu" xPosition="after">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+
+  <button mat-icon-button [matMenuTriggerFor]="menuAbove">
+    <mat-icon>keyboard_arrow_up</mat-icon>
+  </button>
+  <mat-menu #menuAbove="matMenu" yPosition="above">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+
+  <button mat-icon-button [matMenuTriggerFor]="menuBelow">
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </button>
+  <mat-menu #menuBelow="matMenu" yPosition="below">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+  `;
+
+  menuCustomPositionTypeScript = `
+  import { MatMenuModule } from '@angular/material';
+  
+  @NgModule({
+    imports: [
+      MatMenuModule,
+    ],
+  })
+  export class SomeModule { }
+  `;
+
+  menuCustomPositionCss = `
+  /** No CSS for this example */
+  `;
+
   constructor() { }
 
   ngAfterContentInit() {

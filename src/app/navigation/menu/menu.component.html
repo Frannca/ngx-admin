@@ -69,6 +69,58 @@
     </div>
   </div>
 
+  <div class="fra-card-simple fra-margin-top mat-elevation-z2" @zoomInMedium>
+    <div class="fra-card-title">
+      <h6 class="mat-subheading-1">Custom Position</h6>
+    </div>
+    <div class="fra-card-content fra-card-align-center">
+      <button mat-icon-button [matMenuTriggerFor]="menuBefore">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+      <mat-menu #menuBefore="matMenu" xPosition="before">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+
+      <button mat-icon-button [matMenuTriggerFor]="menuAfter">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </button>
+      <mat-menu #menuAfter="matMenu" xPosition="after">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+
+      <button mat-icon-button [matMenuTriggerFor]="menuAbove">
+        <mat-icon>keyboard_arrow_up</mat-icon>
+      </button>
+      <mat-menu #menuAbove="matMenu" yPosition="above">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+
+      <button mat-icon-button [matMenuTriggerFor]="menuBelow">
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </button>
+      <mat-menu #menuBelow="matMenu" yPosition="below">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
+    <div class="fra-card-code">
+      <mat-tab-group>
+        <mat-tab label="HTML">
+          <pre><code highlight [language]="['html']" [code]="menuCustomPositionHtml"></code></pre>
+        </mat-tab>
+        <mat-tab label="TypeScript">
+          <pre><code highlight [language]="['typescript']" [code]="menuCustomPositionTypeScript"></code></pre>
+        </mat-tab>
+        <mat-tab label="CSS">
+          <pre><code highlight [language]="['css']" [code]="menuCustomPositionCss"></code></pre>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+
   <h5 class="fra-title mat-subheading-2" @fadeInSmall>Resources</h5>
 
   <div class="fra-row">
